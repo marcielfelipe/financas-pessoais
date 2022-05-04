@@ -1,0 +1,52 @@
+<div class="container">
+  <div></div>
+  <div class="logo">
+    <h1>finance<strong>.</strong></h1>
+  </div>
+  <div></div>
+  <div></div>
+  <form action="" class="loginForm">
+    <mat-card class="card" >
+      <form [formGroup]="formGroupLogin" (ngSubmit)="onSubmit()" class="card-form" >
+        <mat-card-title class="card-title">
+          Faça login
+        </mat-card-title>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput 
+            formControlName="email"
+            name="email"
+            required
+            placeholder="seunome@dominio.com"
+          >
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input matInput 
+            formControlName="senha"
+            name="senha"
+            required
+            type="password"
+            placeholder="**********"
+          >
+        </mat-form-field>
+  
+        <button mat-raised-button 
+          color="primary"
+          class="card-button"
+          type="submit"
+          [disabled]="!formGroupLogin.valid"
+        >
+          Entrar
+        </button>
+      </form>
+
+    </mat-card>
+  </form>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
